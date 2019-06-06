@@ -1,5 +1,8 @@
 // import flats from '../../data/flats';
 
+export const SET_FLATS = "SET_FLATS";
+export const SELECT_FLAT = "SELECT_FLAT";
+
 export function setFlats() {
   // return {
   //   type: 'SET_FLATS',
@@ -10,7 +13,7 @@ export function setFlats() {
     .then(response => response.json())
     .then((data) => {
       return {
-        type: 'SET_FLATS',
+        type: SET_FLATS,
         payload: data
       };
     });
@@ -18,7 +21,7 @@ export function setFlats() {
 
 export function selectFlat(flat) {
   return {
-    type: 'SELECT_FLAT',
+    type: SELECT_FLAT,
     payload: flat
   };
 }
